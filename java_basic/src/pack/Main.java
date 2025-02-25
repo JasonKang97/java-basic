@@ -13,19 +13,19 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer token = new StringTokenizer(br.readLine(), " ");
-		String s;
+		int N = Integer.parseInt(token.nextToken());
 		
-		while((s= br.readLine())!=null) {
-			int N = Integer.parseInt(token.nextToken());
-			int a[]=new int[N];
-			
-			int A = Integer.parseInt(token.nextToken());
-			int B = Integer.parseInt(token.nextToken());
-			bw.write(A+B+"\n");
+		int[] A = new int[N]; 
+		
+		token = new StringTokenizer(br.readLine(), " ");
+		for(int i=0;i<N;i++) {
+			int a = Integer.parseInt(token.nextToken());
+			A[i] = a;
 		}
+		System.out.print(A[1] + Integer.MAX_VALUE);
+		
 		br.close();
 		bw.flush();
 		bw.close();
 	}
 }
-
